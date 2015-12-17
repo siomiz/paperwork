@@ -39,8 +39,8 @@ RUN npm install -g gulp bower \
 	&& bower --allow-root install \
 	&& gulp \
 	&& chown -R lighttpd.lighttpd app/storage \
-	&& sed -r '/registration/s/true/false/' app/config/paperwork.php \
-	&& sed -r '/showIssueReportingLink/s/true/false/' app/config/paperwork.php \
+	&& sed -ir '/registration/s/true/false/' app/config/paperwork.php \
+	&& sed -ir '/showIssueReportingLink/s/true/false/' app/config/paperwork.php \
 	&& echo 'mysql, mysql, 3306, paperwork, paperwork' > app/storage/db_settings
 
 COPY lighttpd.conf /etc/lighttpd/
