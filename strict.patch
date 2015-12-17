@@ -1,0 +1,13 @@
+diff --git a/frontend/app/config/database.php b/frontend/app/config/database.ph
+p
+index 3c1a43a..7974772 100644
+--- a/frontend/app/config/database.php
++++ b/frontend/app/config/database.php
+@@ -74,6 +74,7 @@ return array(
+ 			'charset'   => 'utf8',
+ 			'collation' => 'utf8_general_ci',
+ 			'prefix'    => '',
++			'strict'    => true,
+ 		),
+ 
+ 		'pgsql' => array(
